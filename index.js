@@ -44,22 +44,22 @@ export default class BlurOverlay extends Component {
         const { children } = this.props;
         return (
             this.state.showBlurOverlay ?
-            <View
-                style={styles.style}
-            >
-            <TouchableWithoutFeedback style={styles.style} onPress={this.closeOverlay}>
+            // <View
+            //     style={styles.style}
+            // >
+            //{/* <TouchableWithoutFeedback style={styles.style} onPress={this.closeOverlay}> */}
                 <RCTSajjadBlurOverlay
                     {...this.props}
-                    style={[this.props.customStyles,styles.style]}
+                    style={styles.style}
                 >
-                <View
-                    style={[this.props.customStyles,styles.style]}
-                >
+                {/* <View
+                    style={styles.style}
+                > */}
                     {children}
-                </View>
+                {/* </View> */}
                 </RCTSajjadBlurOverlay>
-            </TouchableWithoutFeedback>
-            </View>
+            //{/* </TouchableWithoutFeedback> */}
+            // </View>
             :
                 null
         );
@@ -68,15 +68,15 @@ export default class BlurOverlay extends Component {
 
 const styles = StyleSheet.create({
     style: {
-        position: 'absolute',
+        // position: 'absolute',
         flex: 1,
-        left: 0,
-        top: 0,
-        bottom: 0,
-        right: 0,
+        // left: 0,
+        // top: 0,
+        // bottom: 0,
+        // right: 0,
         //  resizeMode: 'cover',
-        width: null,
-        height: null,
-        zIndex: 999,
+        // width: null,
+        // height: null,
+        // zIndex: 999,
     },
 });
