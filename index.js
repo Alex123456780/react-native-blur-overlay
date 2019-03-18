@@ -3,7 +3,7 @@ import {
     Platform,
     requireNativeComponent,
     StyleSheet,
-    TouchableWithoutFeedback,
+    // TouchableWithoutFeedback,
 } from 'react-native';
 import React, {Component,} from 'react';
 import PropTypes from 'prop-types'
@@ -44,22 +44,20 @@ export default class BlurOverlay extends Component {
         const { children } = this.props;
         return (
             this.state.showBlurOverlay ?
-            // <View
-            //     style={styles.style}
-            // >
-            //{/* <TouchableWithoutFeedback style={styles.style} onPress={this.closeOverlay}> */}
+            <View
+                style={styles.style}
+            >
                 <RCTSajjadBlurOverlay
                     {...this.props}
                     style={styles.style}
                 >
-                {/* <View
+                <View
                     style={styles.style}
-                > */}
+                >
                     {children}
-                {/* </View> */}
+                </View>
                 </RCTSajjadBlurOverlay>
-            //{/* </TouchableWithoutFeedback> */}
-            // </View>
+            </View>
             :
                 null
         );
@@ -68,15 +66,15 @@ export default class BlurOverlay extends Component {
 
 const styles = StyleSheet.create({
     style: {
-        // position: 'absolute',
+        position: 'absolute',
         flex: 1,
-        // left: 0,
-        // top: 0,
-        // bottom: 0,
-        // right: 0,
-        //  resizeMode: 'cover',
-        // width: null,
-        // height: null,
-        // zIndex: 999,
+        left: 0,
+        top: 0,
+        bottom: 0,
+        right: 0,
+         resizeMode: 'cover',
+        width: null,
+        height: null,
+        zIndex: 999,
     },
 });
